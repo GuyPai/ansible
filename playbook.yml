@@ -1,0 +1,16 @@
+---
+- name: new machine playbook
+  hosts: newnodes
+  remote_user: user1
+  become: true
+  become_method: su
+
+  tasks:
+  - name: update and install basic apps
+    apt:
+      name: 
+        - sudo
+        - git-all
+        - vim
+      state: present
+      update_cache: yes
