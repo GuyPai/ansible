@@ -8,9 +8,5 @@
   tasks:
   - name: update and install basic apps
     apt:
-      name: 
-        - sudo
-        - git-all
-        - vim
-      state: present
       update_cache: yes
+      upgrade: full
